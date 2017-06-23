@@ -1,0 +1,20 @@
+@echo off
+echo 
+BCH
+z -d poly=1010100111001
+echo 
+CRC-16
+z -d poly=11000000000000101
+echo 
+CRC-SDLC-16
+z -d poly=10001000000100001
+echo 
+CRC-16 rev.
+z -d poly=10100000000000011
+echo 
+CRC-SDLC-16 rev.
+z -d poly=10000100000010001
+echo 
+CRC-Ethernet
+z -d poly=100000100110000010001110110110111
+

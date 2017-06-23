@@ -18,81 +18,66 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="src\BCH.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="src\BUFFIO.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\GFIELD.HPP">
+    <ClInclude Include="src\CHANNEL.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\LFSR.HPP">
+    <ClInclude Include="src\ERRN.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\CHANNEL.HPP">
+    <ClInclude Include="src\GENERIC.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\GENERIC.HPP">
+    <ClInclude Include="src\GFIELD.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ERRN.HPP">
+    <ClInclude Include="src\LFSR.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\SLIST.HPP">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\BUFFIO.HPP">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\BCH.HPP">
+    <ClInclude Include="src\SLIST.HPP">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="src\BUFFIO.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="161B.cpp">
+    <ClCompile Include="src\CHANNEL.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\DEBUG.CPP">
+    <ClCompile Include="src\DEBUG.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\GFIELD.CPP">
+    <ClCompile Include="src\DEFERR.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\RLLTBL.CPP">
+    <ClCompile Include="src\GFIELD.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\LFSR.CPP">
+    <ClCompile Include="src\LFSR.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\PSUMTBL.CPP">
+    <ClCompile Include="src\PMAT.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\PMAT.CPP">
+    <ClCompile Include="src\PSUM.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\SYND.CPP">
+    <ClCompile Include="src\PSUMTBL.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\CHANNEL.CPP">
+    <ClCompile Include="src\RLLTBL.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\BUFFIO.CPP">
+    <ClCompile Include="src\SLIST.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\DEFERR.CPP">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\SLIST.CPP">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FAX.CPP">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\PSUM.CPP">
+    <ClCompile Include="src\SYND.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

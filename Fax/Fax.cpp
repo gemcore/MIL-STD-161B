@@ -23,14 +23,14 @@
 */
 #include <stdio.h>      /* C Standard input/output i/f */
 #include <stdlib.h>     /* C Standard Library i/f */
-#include <setjmp.h>		/* C Non-local goto i/f */
-#include <iostream>		/* C++ stream input/output class */
+#include <setjmp.h>     /* C Non-local goto i/f */
+#include <iostream>     /* C++ stream input/output class */
 using namespace std;
-#include "..\src\channel.hpp" /* C++ Data Channel class */
-#include "..\src\bch.hpp"     /* C++ BCH(51,12) solution methods class */
+#include "channel.hpp"  /* C++ Data Channel class */
+#include "bch.hpp"      /* C++ BCH(51,12) solution methods class */
 
 /* Local variables */
-char dflag=1,  		                  // debug output flag
+char dflag=0,  		                  // debug output flag
      qflag=0,					      	   // quiet mode
      eflag=0,					      	   // encode words
      fflag=0,					      	   // FEC used
@@ -562,7 +562,7 @@ void chan::decode()
    if (!qflag)
       stats();                         // display statistics
 }
-
+
 void process(void)
 {
 	chan *f = new chan(ifile, ofile, sflag);// initialize a data channel
@@ -580,9 +580,7 @@ void process(void)
 }
 
 
-extern "C" 
-
-void fax(int argc,char *argv[])
+void main(int argc,char *argv[])
 {
    char *p;
    int i;

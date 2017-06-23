@@ -3,7 +3,6 @@
 #ifndef GFIELDHPP
 #define GFIELDHPP
 #include <iostream>                  /* C++ stream input/output class */
-
 using namespace std;
 
 /* Standard Definitions */

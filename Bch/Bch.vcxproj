@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A429D323-0F38-4568-8A5E-6FAC79A0E44C}</ProjectGuid>
+    <ProjectGuid>{E40F800C-B3E7-43D5-9B68-EBA86F2A544D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My161B</RootNamespace>
+    <RootNamespace>Bch</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -101,6 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Alan\Documents\Visual Studio 2017\Projects\161B\Lib\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,33 +143,15 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\BCH.HPP" />
-    <ClInclude Include="..\src\BUFFIO.HPP" />
-    <ClInclude Include="..\src\CHANNEL.HPP" />
-    <ClInclude Include="..\src\ERRN.HPP" />
-    <ClInclude Include="..\src\GENERIC.HPP" />
-    <ClInclude Include="..\src\GFIELD.HPP" />
-    <ClInclude Include="..\src\LFSR.HPP" />
-    <ClInclude Include="..\src\SLIST.HPP" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\BUFFIO.CPP" />
-    <ClCompile Include="..\src\CHANNEL.CPP" />
-    <ClCompile Include="..\src\DEBUG.CPP" />
-    <ClCompile Include="..\src\DEFERR.CPP" />
-    <ClCompile Include="..\src\GFIELD.CPP" />
-    <ClCompile Include="..\src\LFSR.CPP" />
-    <ClCompile Include="..\src\PMAT.CPP" />
-    <ClCompile Include="..\src\PSUM.CPP" />
-    <ClCompile Include="..\src\PSUMTBL.CPP" />
-    <ClCompile Include="..\src\RLLTBL.CPP" />
-    <ClCompile Include="..\src\SLIST.CPP" />
-    <ClCompile Include="..\src\SYND.CPP" />
-    <ClCompile Include="161B.cpp" />
-    <ClCompile Include="FAX.CPP" />
+    <ClCompile Include="Bch.cpp" />
     <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\x64\Debug\161BLib.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

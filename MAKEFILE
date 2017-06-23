@@ -1,0 +1,193 @@
+# MAKEFILE for C++ BCH Utilities (Small model)
+# Note assumes BUILTINS rules for .OBJ files
+
+.NOSHELL
+
+.LIBRARY .lib
+
+objs = obj
+libs = .\lib
+
+LIBS = $(libs)\bch.lib cppts.lib
+
+LINK_OPTS = /NOI /NOE /CO /L
+
+# dependencies
+
+utilities   : div.exe err.exe bc.exe dc.exe r.exe bch.exe sc.exe scg.exe m.exe fax.exe rl.exe inter.exe z.exe t.exe test.exe sertst.exe
+
+div.exe     : div.obj
+   link <@<
+$(objs)\div.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+div2.exe    : div2.obj $(libs)\channel.hpp $(libs)\bch.hpp $(libs)\lfsr.hpp $(libs)\gfield.hpp
+   link <@<
+$(objs)\div2.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+err.exe     : err.obj
+   link <@<
+$(objs)\err.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+
+bc.exe      : bc.obj
+   link <@<
+$(objs)\bc.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+
+dc.exe      : dc.obj
+   link <@<
+$(objs)\dc.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+
+r.exe       : r.obj
+   link <@<
+$(objs)\r.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+
+bch.exe     : bch.obj $(libs)\channel.hpp $(libs)\bch.hpp $(libs)\lfsr.hpp $(libs)\gfield.hpp
+   link <@<
+$(objs)\bch.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+sc.exe      : sc.obj $(libs)\channel.hpp
+   link <@<
+$(objs)\sc.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+scg.exe     : scg.obj $(libs)\channel.hpp
+   link <@<
+$(objs)\scg.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) fgs.lib /map;
+<
+   bunch -t16 -ms $*
+
+m.exe       : m.obj $(libs)\channel.hpp
+   link <@<
+$(objs)\m.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+fax.exe     : fax.obj $(libs)\channel.hpp $(libs)\bch.hpp $(libs)\lfsr.hpp $(libs)\gfield.hpp
+   link <@<
+$(objs)\fax.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+rl.exe      : rl.obj $(libs)\channel.hpp
+   link <@<
+$(objs)\rl.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+inter.exe   : inter.obj $(libs)\channel.hpp
+   link <@<
+$(objs)\inter.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+z.exe       : z.obj $(libs)\channel.hpp $(libs)\bch.hpp $(libs)\lfsr.hpp $(libs)\gfield.hpp
+   link <@<
+$(objs)\z.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+t.exe       : t.obj $(libs)\channel.hpp $(libs)\bch.hpp $(libs)\lfsr.hpp $(libs)\gfield.hpp
+   link <@<
+$(objs)\t.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+test.exe    : test.obj $(libs)\channel.hpp $(libs)\bch.hpp $(libs)\lfsr.hpp $(libs)\gfield.hpp
+   link <@<
+$(objs)\test.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+
+sertst.exe  : sertst.obj $(libs)\serial.hpp $(libs)\ioport.hpp $(libs)\buffio.hpp
+   link <@<
+$(objs)\sertst.obj $(LINK_OPTS)
+$*
+$*
+$(LIBS) /map;
+<
+   bunch -t16 -ms $*
+
+
+clean       :
+   +del *.exe
+   +del *.map
+   +del *.hex
+   +del *.loc
+   +dels $(objs) *.* -c
+
+#err.c       :
+#bc.c        :
+#dc.c        :
+#r.c         :
+#div.cpp     : lib\channel.hpp lib\bch.hpp lib\lfsr.hpp lib\gfield.hpp
+#bch.cpp     : lib\channel.hpp lib\bch.hpp lib\lfsr.hpp lib\gfield.hpp
+#sc.cpp      : lib\channel.hpp
+#scg.cpp     : lib\channel.hpp
+#m.cpp       : lib\channel.hpp
+#fax.cpp     : lib\channel.hpp lib\bch.hpp lib\lfsr.hpp lib\gfield.hpp
+#rl.cpp      : lib\channel.hpp
+#inter.cpp   : lib\channel.hpp
+#z.cpp       : lib\channel.hpp lib\bch.hpp lib\lfsr.hpp lib\gfield.hpp
+#t.cpp       : lib\channel.hpp lib\bch.hpp lib\lfsr.hpp lib\gfield.hpp
+#test.cpp    : lib\channel.hpp lib\bch.hpp lib\lfsr.hpp lib\gfield.hpp
+#sertst.cpp  : lib\serial.hpp lib\ioport.hpp lib\buffio.hpp
+
