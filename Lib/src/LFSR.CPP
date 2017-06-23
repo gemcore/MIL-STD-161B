@@ -10,7 +10,6 @@ lfsr::operator uint()
 
 lfsr::lfsr(uint gx)
 {
-   printf("lfsr::lfsr(%x)\n", gx);
    r = 0;
    G = gx;
 
@@ -32,7 +31,6 @@ lfsr::lfsr(uint gx)
 
 lfsr::~lfsr()
 {
-	printf("lfsr::~lfsr()\n");
 	delete syndromes;
 } 
 

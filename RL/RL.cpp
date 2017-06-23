@@ -22,12 +22,11 @@
 **	
 **============================================================================
 */
-
 #include <stdio.h>      /* C Standard input/output i/f */
 #include <stdlib.h>     /* C Standard Library i/f */
-#include <iostream> /* C++ stream input/output class */
+#include <iostream>     /* C++ stream input/output class */
 using namespace std;
-#include "..\src\channel.hpp" /* C++ Data Channel class */
+#include "channel.hpp"  /* C++ Data Channel class */
 
 #ifdef DEBUG
 int debug(const char *, ...);
@@ -41,10 +40,10 @@ bool kbhit(void)
 }
 
 /* Local variables */
-char dflag=0,  		                  // debug output flag
-     qflag=0,					      	   // quiet mode
-     eflag=0,					      	   // encode words
-     *ifile=NULL,                      // pointers to command line filenames
+char dflag=0,  		                 // debug output flag
+     qflag=0,                        // quiet mode
+     eflag=0,                        // encode words
+     *ifile=NULL,                    // pointers to command line filenames
      *ofile=NULL;	         
 
 /* Data sequences */
@@ -492,7 +491,7 @@ void process(void)
 	delete f;
 }
 
-int rl(int argc,char *argv[])
+int main(int argc,char *argv[])
 {
    char *p;
    int i;
@@ -530,9 +529,9 @@ int rl(int argc,char *argv[])
                cerr << "-ofile output file\n";
                cerr << "-e     encoder (default is decoder)\n";
                cerr << "-q     quiet mode\n";
-               #ifdef DEBUG
+#ifdef _DEBUG
                cerr << "-d     output debug to stderr\n";
-               #endif
+#endif
                exit(1);
             }
          }
