@@ -28,8 +28,8 @@
 using namespace std;
 #include "channel.hpp"  /* C++ Data Channel class */
 
-#ifdef DEBUG
-int debug(const char *, ...);
+#ifdef _DEBUG
+extern "C" int debug(const char *, ...);
 #else
 #define  debug ;
 #endif
